@@ -49,8 +49,8 @@
                 <p>When I'm not coding, you can find me exploring the latest trends in web development, experimenting with new technologies, and contributing to open-source projects. Let's collaborate and create something amazing!</p>
             </div>
             <h2><span>Skills</span></h2>
-            <div class="skills">
-                <ul>
+            <div class="skills" id="list">
+                <ul id="list1">
                     <li>
                         <span>
                             <i class='bx bx-chevron-right'></i>
@@ -70,7 +70,7 @@
                         </span>
                     </li>
                 </ul>
-                <ul>
+                <ul id="list2">
                     <li>
                         <span>
                             <i class='bx bx-chevron-right'></i>
@@ -140,10 +140,18 @@
     <section id="contact"> 
         <h1 class="header"> <span>Contact</span> </h1> 
         <form id="form"> 
+            <div class="input-box">
+                <span>To Name</span>
+                <input type="text" id="toname" name="to_name" placeholder="Enter the name who you want to send message">
+            </div>
             <div class="input-box"> 
                 <span>Full Name</span> 
                 <input type="text" id="fullName" name="from_name" placeholder="Enter your Full Name"> 
             </div> 
+            <div class="input-box">
+                <span>Enter your email id</span>
+                <input type="email" id="senderemail" name="reply_to" placeholder="Enter your email id">
+            </div>
             <div class="input-box"> 
                 <span>Your Message</span> 
                 <textarea type="text" id="message" name="message" placeholder="Enter your Message"></textarea> 
@@ -151,7 +159,7 @@
             <button type="submit" id="button" class="btn">Send Email</button> 
         </form> 
     </section>  
-    
+
     <footer>
         <div class="col-left">
             <div class="col-box">
