@@ -137,26 +137,22 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h1 class="header">
-            <span>Contact</span>
-        </h1>
-        <form id="contactForm" onsubmit="sendEmail(event)">
-            <div class="input-box">
-                <span>Full Name</span>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter your Full Name">
-            </div>
-            <div class="input-box">
-                <span>Your Email</span>
-                <input type="email" id="userEmail" name="userEmail" placeholder="Enter your Email id">
-            </div>
-            <div class="input-box">
-                <span>Your Message</span>
-                <textarea type="text" id="message" name="message" placeholder="Enter your Message"></textarea>
-            </div>
-            <button type="submit" id="submit" class="btn">Submit</button>
-        </form>
-    </section>    
+    <section id="contact"> 
+        <h1 class="header"> <span>Contact</span> </h1> 
+        <form id="form"> 
+            <div class="input-box"> 
+                <span>Full Name</span> 
+                <input type="text" id="fullName" name="from_name" placeholder="Enter your Full Name"> 
+            </div> <div class="input-box"> 
+                <span>Your Email</span> 
+                <input type="email" id="userEmail" name="reply_to" placeholder="Enter your Email id"> 
+            </div> <div class="input-box"> 
+                <span>Your Message</span> 
+                <textarea type="text" id="message" name="message" placeholder="Enter your Message"></textarea> 
+            </div> 
+            <button type="submit" id="button" class="btn">Send Email</button> 
+        </form> 
+    </section>  
 
     <footer>
         <div class="col-left">
