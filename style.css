@@ -305,8 +305,14 @@ form input{
     outline: none;
 }
 
-#submit{
+form #button{
     color: black;
+}
+
+form #button:hover{
+    background: rgb(24,24,24);
+    border: 2px solid white;
+    color: white;
 }
 
 form input:focus{
