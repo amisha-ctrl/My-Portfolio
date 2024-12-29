@@ -118,7 +118,7 @@ section {
 }
 
 #home img {
-    width: 25%;
+    width: 50%;
     max-width: 150px;
     border-radius: 50%;
     margin-top: 2em;
@@ -394,6 +394,10 @@ footer{
 }
 
 @media (max-width: 960px) {
+    nav {
+        overflow-x: visible;
+    }
+
     section {
         padding: 8em 15%;
     }
@@ -431,7 +435,7 @@ footer{
         font-size: 2em;
     }
     #home img {
-        max-width: 24vw;
+        max-width: 15vw;
     }
     #about {
         flex-direction: column;
@@ -448,6 +452,10 @@ footer{
 }
 
 @media (max-width: 760px) {
+    nav {
+        overflow-x: visible;
+    }
+
     #home h1 {
         font-size: 2.5em;    
     }
@@ -455,7 +463,7 @@ footer{
         font-size: 1.5em;
     }
     #home img {
-        max-width: 32vw;
+        max-width: 25vw;
     }
 
     #about img {
