@@ -333,64 +333,87 @@ form #button:hover{
     color: white;
 }
 
-footer{
+footer {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10em;
+    flex-wrap: wrap;
+    align-items: center; /* Align to the top */
+    justify-content: space-between;
+    gap: 2em;
     bottom: 0;
     background-color: var(--background);
     width: 100%;
-    padding: 5em 15%;
+    padding: 5em 10%; /* Adjusted padding */
+    color: white;
 }
 
-.col-left{
+.col-left {
+    flex: 1 1 45%; /* Make columns responsive and balanced */
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    flex-direction: column; /* Ensure stacking of items */
+    gap: 1em; /* Add spacing between items */
 }
 
-.col-box{
+.col-box {
     display: flex;
     align-items: center;
     gap: 1em;
 }
 
-.col-box i{
+.col-box i {
     font-size: 2em;
 }
 
-.col-box span{
+.col-box span {
     font-size: 1.2em;
 }
 
-.col-right{
+.col-right {
+    flex: 1 1 45%; /* Make columns responsive and balanced */
     display: flex;
-    flex-direction: column;
-    gap: 1em;
-    color: white;
-    max-width: 500px;
+    flex-direction: column; /* Ensure stacking of items */
+    gap: 1em; /* Add spacing between items */
 }
 
-.col-right span{
+.col-right span {
     font-size: 1.3em;
 }
 
-.col-right .social-icons{
+.social-icons {
     display: flex;
-    align-items: baseline;
-    justify-content: left;
     gap: 1em;
 }
 
-.col-right .social-icons i{
+/* Gradient effect for LinkedIn and GitHub icons */
+.social-icons a i {
     font-size: 2em;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+    background: linear-gradient(to right, #6cff52, #3ec5ff); /* Gradient color */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* Standard property for future compatibility */
+    -webkit-text-fill-color: transparent; /* Ensures gradient is visible in WebKit browsers */
+    color: transparent; /* Fallback for non-compatible browsers */
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition */
 }
 
-.social-icons i:hover{
-    color: white;
+/* Hover effect: Turn icons white */
+.social-icons a:hover i {
+    background: none; /* Remove gradient */
+    color: white; /* Turn icons white */
+    -webkit-text-fill-color: white; /* For WebKit browsers */
+}
+
+/* Gradient effect for icons */
+.social-icons a i {
+    background: linear-gradient(to right, #6cff52, #3ec5ff); /* Gradient color */
+    background-clip: text; /* Ensures gradient applies to text */
+    color: transparent; /* Makes non-hover text transparent */
+    font-size: 2em;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect: Turn icons white */
+.social-icons a:hover i {
+    background: none; /* Remove gradient */
+    color: white; /* Turn icons white */
 }
 
 @media (max-width: 960px) {
@@ -449,6 +472,16 @@ footer{
     #about ul {
         font-size: 1em;
     }
+    footer {
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+        align-items: center;
+    }
+    /* Increase icon size in footer */
+    .social-icons a i {
+        font-size: 2.5em; /* Larger size */
+    }
 }
 
 @media (max-width: 760px) {
@@ -497,6 +530,9 @@ footer{
         flex-direction: column;
         gap: 5em;
         align-items: baseline;
+    }
+    .social-icons a i {
+        font-size: 3em; /* Larger size */
     }
 }
 
@@ -566,5 +602,8 @@ footer{
 
     .social-icons {
         justify-content: center;
+    }
+    .social-icons a i {
+        font-size: 3.5em; /* Larger size for smaller screens */
     }
 }
